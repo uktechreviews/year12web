@@ -2,18 +2,38 @@
 <html>
   <head>
     <script>
-    // Define a function which will be called when the button is clicked
-    function greeting(){
-      // Retrieve the value of the 'firstname' text box
-      alert("Hello " + document.getElementById("firstname").value);
-      }
+    function analysis(){
+        alert("Thank you " + document.getElementById("firstname").value + " for submitting your answers");
+        var name = document.getElementById("firstname").value;
+        var mode = document.getElementById("transport").value;
+        var delay = document.getElementById("late").value;
+        document.write("Thank you " + name);
+        document.write("<hr>");
+        document.write("<br>");
+        document.write("You came to school today by " + mode);
+        document.write("<br>");
+        if (delay == "Yes") {
+            document.write("I'm very sorry to hear you were late this morning");
+        }
+    }
     </script>
    </head>
+
+
+
 <body>
+<h1>Welcome to my class survey</h1>
+<h2>Please complete the form below</h2>
   <form>
     <p>What is your name?</p> 
-     <input type="text" id="firstname">
-     <input type="submit" onclick="greeting()">
+    <input type="text" id="firstname">
+    <br>
+    <h3>Please answer the questions below about your mode of transport to school</h3>
+    <p>What mode of transport did you use today?</p>
+    <input type="text" id="transport">
+    <p>Were you delayed this morning [Yes : No]</p>
+    <input type="text" id="late">
+    <input type="submit" onclick="analysis()">
   </form>
 </body>
 </html>
