@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    // Define a function which will be called when the button is clicked
+    function greeting(){
+      // Retrieve the value of the 'firstname' text box
+      alert("Hello " + document.getElementById("firstname").value);
+      }
+    </script>
+   </head>
+<body>
+  <form>
+    <p>What is your name?</p> 
+     <input type="text" id="firstname">
+     <input type="submit" onclick="greeting()">
+  </form>
+</body>
+</html>
